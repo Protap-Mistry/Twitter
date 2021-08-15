@@ -1,0 +1,267 @@
+body
+{
+	background-color: #111d2b;
+	color: white;
+}
+
+.mynav 
+{
+    background: #343a40 !important;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    border-radius: .2rem;
+    border: 1px solid white !important;
+}
+.navbar-dark .navbar-nav .nav-link 
+{
+    color: #fff;
+    font-weight: bold;
+}
+.navbar-dark .navbar-nav .nav-link:hover
+{
+    color: black;
+}
+.container 
+{
+    max-width: 90% !important;
+}
+
+.active a
+{
+	color: green !important;
+}
+
+.logo
+{
+    height: auto;
+    width: 2rem;
+}
+.navbar_search
+{
+	margin-right: 20px;
+	width: 400px;
+}
+.dropdown-item 
+{
+	color: #fff;
+}
+.dropdown a
+{
+	text-decoration: none;
+}
+.dropdown a:hover
+{
+	color: #fff;
+}
+.dropdown a span
+{
+	color: tomato; 
+	font-weight: bold;
+}
+.dropdown-menu
+{
+	background: #343a40;
+	max-height: 400px;
+  	overflow-y: auto;
+}
+.usermenu
+{
+	min-width: 5.6rem;
+	border: 1px solid #fff;
+}
+.usermenu li
+{
+	border-bottom: 1px solid gray;
+}
+.usermenu li a
+{
+	color: #fff;
+}
+.usermenu li a:hover, .for_notify_menu li a:hover
+{
+	color: black;
+}
+.for_notify_menu
+{
+	border: 1px solid #fff;
+}
+
+.for_notify_menu li
+{
+	float:none;	
+	font-weight:normal;
+	list-style:none;
+	width:12.2rem;
+	border-bottom: 1px solid gray;
+}
+.for_notify_menu li a
+{	
+	background:none;
+	color: #fff;
+	border:none;
+	display:block;
+	font-size: 0.8rem;
+	padding:7px 10px;
+	text-decoration:none;
+	text-shadow:none;
+}
+.for_notify_menu li a b
+{	
+	color: tomato;
+}
+.card{
+    color: black;
+    height: fit-content;
+}
+
+.card-body{
+    background-color: gray;
+    color: white;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.one{
+    text-align: left;
+    flex: 20%;
+}
+.mycard{
+    width: 50%;
+    margin: 0 auto;
+}
+.form_label label
+{
+	color: black;
+	font-weight: bold;
+}
+/* Upload */
+input[type="file"].novisible 
+{
+	display: none;
+}
+input[type="file"].novisible + label
+{
+	 /* width:200px;
+	 height:200px;
+	 border-radius:50%; */
+	 border:1px solid gray;
+	 display:inline-flex;
+	 justify-content:center;
+	 align-items:center;
+}
+.novisible i
+{
+	cursor: pointer;
+}
+
+.postcard {
+    color: black;
+    border-radius: .5rem;
+    margin: 0rem;
+}
+.postcard .jumbotron
+{
+	background-color: #343a40;
+}
+.jumbotron p
+{
+	color: #fff;
+	text-align: justify;
+}
+.like_button, .dislikes
+{
+	text-decoration: none !important;
+}
+.comment_section
+{
+	margin-top: 5px; 
+	margin-bottom: 5px; 
+	padding-left: 0;
+}
+.comment_section small
+{
+	color: #fff;
+}
+.no_result 
+{
+	color: red; 
+	text-align: center;
+}
+
+/**pagination work start**/
+.pagination
+{
+	display: block;
+	text-align: center;
+	font-size: 15px;
+	margin-top: 10px;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+.pagination a
+{
+	text-decoration: none;
+	background-color: #6F4E37;
+	color: #fff;
+	border: 2px solid #fff;
+	padding: 2px 10px; 
+	margin-left: 3px;
+	border-radius: 10px;
+}
+.pagination a:hover
+{
+	background-color: black;
+	color: #fff;
+}
+/**pagination work end**/
+
+.users h4
+{
+	color: black;
+}
+.follower_number
+{
+	background-color: #343a40; 
+	padding: 3px 5px; 
+	border-radius: .2rem;
+}
+.under_users
+{
+	border-bottom: 1px solid black; 
+	margin: 10px;
+}
+.search input[type="text"]
+{
+	border: 1px solid black;
+}
+.search button
+{
+	border: 1px solid black;
+}
+.search_span
+{
+	background-color: #343a40;
+	color: #fff; 
+	padding: 3px 5px; 
+	border-radius: .2rem;
+}
+.under_search
+{
+	margin: 10px;
+}
+/*footer*/
+.myfooterdesign {
+    border: 1px solid white !important;
+    border-radius: .2rem;
+    padding: 1rem 1rem;
+    margin-bottom: 1px;
+    background-color: #343a40;
+}
+.myfooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
