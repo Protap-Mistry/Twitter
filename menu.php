@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark mynav">
-  	<a class="navbar-brand" href="index.php"> <img src="images/twitter.svg" class="logo" alt="Logo"></a>
+  	<a class="navbar-brand" href="index.php"> <img src="images/twitter.svg" class="img-thumbnail img-circle logo" alt="Logo"></a>
   	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     	<span class="navbar-toggler-icon"></span>
   	</button>
@@ -9,7 +9,7 @@
       		<li class="nav-item active home">
         		<a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       		</li>
-      		<li class="nav-item author">
+      		<li class="nav-item">
         		<a class="nav-link" href="#">Author</a>
       		</li>
 		     <!--  <li class="nav-item dropdown">
@@ -88,10 +88,10 @@
 			   
 		   <?php }else{ ?>
 
-	            <li class="nav-item">
+	            <li class="nav-item login_active">
 	              <a class="nav-link" href="login.php">Login</a>
 	            </li>
-	            <li class="nav-item">
+	            <li class="nav-item register_active">
 	                <a class="nav-link" href="register.php">Register</a>
 	            </li>
 

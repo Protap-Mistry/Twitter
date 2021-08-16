@@ -41,5 +41,5 @@
         </div>		    
 	</div>
 </div>
-
+<br>
 <?php include 'inc/footer.php'; ?>

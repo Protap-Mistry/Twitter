@@ -60,10 +60,10 @@
 	</div>
 </div>
 <br>
-<script>
+<!-- <script>
 	$(document).ready(function(){
 		$(".author").addClass("active");
 		$(".home").removeClass("active");
 	});
-</script>
+</script> -->
 <?php include 'inc/footer.php';	?>

@@ -62,4 +62,10 @@
 			</div>
 		</div>
 		<br>
+		<script>
+			$(document).ready(function(){
+				$(".register_active").addClass("active");
+				$(".home").removeClass("active");
+			});
+		</script>
 <?php include 'inc/footer.php';	?>
