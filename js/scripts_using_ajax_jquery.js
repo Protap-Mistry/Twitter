@@ -344,7 +344,7 @@ $(document).ready(function()
 	});
 
 	//start to show the users who dislike the post
-	$('body').tooltip({
+	$(document).tooltip({
 		selector: '.dislikes',
 		title: fetch_users_who_dislike_the_post,
 		html: true,
@@ -357,12 +357,12 @@ $(document).ready(function()
 		var element2= $(this); //it well get the dislikes property
 		var post_id2= element2.data('post_id');
 
-		var dislike= 'fetch_dislike';
+		var dislike= 'fetch_disliker';
 		
 		fetch_data2 = $.ajax({
 			url: "reacts.php",
 			method: "POST",
-			data: {post_id2:post_id2, dislike:dislike},
+			data: {post_id:post_id2, disliker:dislike},
 
 			async: false,
 	

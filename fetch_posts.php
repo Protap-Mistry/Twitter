@@ -13,14 +13,14 @@
 
 	//pagination part-1 start
 	$show_per_page= 5;
-	$page= 1;
+	$posts_pagination= 1;
 
-	if(Session::get("page"))
+	if(Session::get("posts_pagination"))
 	{
-		$page= Session::get("page");
+		$posts_pagination= Session::get("posts_pagination");
 	}
 	
-	$track_start_page= ($page-1)*$show_per_page;
+	$track_start_page= ($posts_pagination-1)*$show_per_page;
 	//pagination part-1 end
 		    
 
@@ -39,14 +39,14 @@
 	$total_pages= ceil($pagination_result/$show_per_page);
 
 	echo "<span class='pagination'> 
-			<a href='index.php?logged_in_id=$id&page=1'>Start</a>";
+			<a href='index.php?&posts_pagination=1'>Start</a>";
 
 			for ($i=1; $i <=$total_pages ; $i++) { 
 				
-				echo "<a href='index.php?logged_in_id=$id&page=$i'>$i</a>";
+				echo "<a href='index.php?&posts_pagination=$i'>$i</a>";
 			}
 
-			echo "<a href='index.php?logged_in_id=$id&page=$total_pages'>End</a> 
+			echo "<a href='index.php?&posts_pagination=$total_pages'>End</a> 
 		</span>";
 
 	//pagination part-2 end

@@ -24,18 +24,30 @@
 	$user= new User();
 	$id= Session::get("id");
 
-	//start for pagination
+	//start for posts pagination
 	
-	if(isset($_GET["page"])){
+	if(isset($_GET["posts_pagination"])){
 
-		$page= $_GET['page'];
-		Session::set("page", $page);
+		$posts_pagination= $_GET['posts_pagination'];
+		Session::set("posts_pagination", $posts_pagination);
 	}
 	else
 	{
-		Session::set("page", NULL);
+		Session::set("posts_pagination", NULL);
 	}
-	//end for pagination
+	//end for posts pagination
+
+	//start for users pagination
+	if(isset($_GET["users_pagination"])){
+
+		$users_pagination= $_GET['users_pagination'];
+		Session::set("users_pagination", $users_pagination);
+	}
+	else
+	{
+		Session::set("users_pagination", NULL);
+	}
+	//end for users pagination
 
 	if(isset($_POST['action']) && $_POST['action'] == 'insert')
 	{

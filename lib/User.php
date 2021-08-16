@@ -664,7 +664,7 @@ class User
 								<button type="button" class="btn btn-link like_button" data-post_id="'.$value["post_id"].'">
 									<i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> ('.$this->countLike($value["post_id"]).')
 								</button>
-								<button type="button" class="btn btn-link dislikes" data-toggle="tooltip" data-post_id="'.$value["post_id"].'">
+								<button type="button" class="btn btn-link dislikes" data-post_id="'.$value["post_id"].'">
 									<i class="fa fa-thumbs-o-down fa-lg" aria-hidden="true"></i> ('.$this->countDislikes($value["post_id"]).') 
 								</button>
 								<button type="button" class="btn btn-primary post_comment" id="'.$value["post_id"].'" data-user_id="'.$value["user_id"].'">
@@ -1318,7 +1318,7 @@ class User
 								<button type="button" class="btn btn-link like_button" data-post_id="'.$value["post_id"].'">
 									<i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> ('.$this->countLike($value["post_id"]).')
 								</button>
-								<button type="button" class="btn btn-link dislikes" data-toggle="tooltip" data-post_id="'.$value["post_id"].'">
+								<button type="button" class="btn btn-link dislikes" data-post_id="'.$value["post_id"].'">
 									<i class="fa fa-thumbs-o-down fa-lg" aria-hidden="true"></i> ('.$this->countDislikes($value["post_id"]).') 
 								</button>
 								<button type="button" class="btn btn-primary post_comment" id="'.$value["post_id"].'" data-user_id="'.$value["user_id"].'">
@@ -1368,7 +1368,7 @@ class User
 	    $result->execute();
 
 	    $result->fetchAll();
-		print_r($result);
+		// print_r($result);
 		$row_count= $result->rowCount();
 	    return $row_count;
 	}
@@ -1385,14 +1385,14 @@ class User
 			return $value["id"];
 		}
 	}
-	public function getSearchingResultUserFollowers($search_result_user_id, $logged_in_id)
+	public function getSearchingResultUserFollowers($search_result_user_id, $logged_in_id, $track_followers_start_page, $show_follower_per_page)
 	{
 		$output= '';
 
 		$sql= "select * from users
 				inner join followers
 				on followers.receiver_id=users.id
-				where followers.sender_id= '".$search_result_user_id."'";
+				where followers.sender_id= '".$search_result_user_id."' limit $track_followers_start_page, $show_follower_per_page";
 
 		$stmt= dbConnection::myPrepareMethod($sql);
 		$stmt->execute();
@@ -1433,6 +1433,27 @@ class User
 			$output= '<h5 class="no_result">Whoops!!! No Followers Found...</h5>';
 		}
 		return $output;
+	}
+
+	public function paginationForShowingSearchUserFollowers($search_result_user_id, $username)
+	{
+		$sql= "select count(users.id) from users
+				inner join followers
+				on followers.receiver_id=users.id
+				where followers.sender_id= '".$search_result_user_id."' and users.username='".$username."'";
+		// $sql= "select count(posts.post_id) from posts
+		// 		inner join users on
+		// 		posts.user_id= users.id
+		// 		where users.username='".$username."'
+		// 		group by posts.post_id
+		// 		order by posts.post_id desc";
+	    $result= dbConnection::myPrepareMethod($sql);
+	    $result->execute();
+
+	    $result->fetchAll();
+		// print_r($result);
+		$row_count= $result->rowCount();
+	    return $row_count;
 	}
 }
 ?>
